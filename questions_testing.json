@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "question": "Are you interested in the field of product of field of product quality assurance?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "QA Engineer"
+      },
+      {
+        "text": "No",
+        "next": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Do you know and want to use test automation frameworks?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Test Automation Engineer"
+      },
+      {
+        "text": "No",
+        "next": null,
+        "result": "Manual Tester"
+      }
+    ]
+  }
+]
