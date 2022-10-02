@@ -34,7 +34,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Graphic Designer"
+        "result": "Graphic Designer",
+        "description": "Graphic Designer is a person who not only cares about the high quality of the graphics, but is also responsible for the visual communication. It cares for the graphics to convey the relevant content and arouse the desired emotions."
       },
       {
         "text": "No",
@@ -53,7 +54,8 @@
       {
         "text": "No",
         "next": null,
-        "result": "Product Designer"
+        "result": "Product Designer",
+        "description": "Product Design is a person who creates concepts for a new product and conducts research to ensure that the most beneficial solutions for the project are found."
       }
     ]
   },
@@ -68,7 +70,8 @@
       {
         "text": "No",
         "next": null,
-        "result": "Product Manager"
+        "result": "Product Manager",
+        "description": "Product Manager is a person who takes care of the entire product, from its creation to sale, who is responsible for the quality, price and market analysis."
       }
     ]
   },
@@ -83,7 +86,8 @@
       {
         "text": "No",
         "next": null,
-        "result": "UX Designer"
+        "result": "UX Designer",
+        "description": "UX Designer is a person who designs the users experience to increase their satisfaction from using product."
       }
     ]
   },
@@ -94,12 +98,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "UX Researcher"
+        "result": "UX Researcher",
+        "description": "UX Researcher is a person who conducts research and looks for the best solutions to catch product bugs and shortcoming that from the user's point of view, need to be fixed."
       },
       {
         "text": "No",
         "next": null,
-        "result": "UX Designer"
+        "result": "UX Designer",
+        "description": "UX Designer is a person who designs the users experience to increase their satisfaction from using product."
       }
     ]
   },
@@ -110,12 +116,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Project Manager"
+        "result": "Project Manager",
+        "description": "Project Manager is a perosn that mainly manages the project, but not only takes care of good planning, but also its execution. This person has to manage budget, time and monitors risks. What is more, in this job it is important to have a very good attitude to people."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Scrum Master"
+        "result": "Scrum Master",
+        "description": "Scrum Master is a person that is responsible for the success of scrum of the group. This person must support its team and remove obstacles that arise by caring for all memebers of the project."
       }
     ]
   },
@@ -126,7 +134,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Mobile Developer"
+        "result": "Mobile Developer",
+        "description": "Mobile Developer is a person that specializes in the developemnt and improvement of software system that is adapted to mobile devices. Possible paths are working on iOS or Android system. "
       },
       {
         "text": "No",
@@ -141,12 +150,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Front-end Developer"
+        "result": "Front-end Developer",
+        "description": "Front-end Developer is a person responsible for the appearance and development of the user interface of the websites for many devices. "
       },
       {
         "text": "No",
         "next": null,
-        "result": "Web Developer"
+        "result": "Web Developer",
+        "description": "Web Developer is a person that specializes in websites and web applications development. What is more, part of their job is to taking care of proper functioning of website form programming point of view. For them it is important to know programming languages like HTML / CSS, C #, Ruby or PHP."
       }
     ]
   }

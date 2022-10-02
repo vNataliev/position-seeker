@@ -20,12 +20,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Network Engineer"
+        "result": "Network Engineer",
+        "description": "Network Engineer is a person responsible for the design and configuration of networks, including LAN, WAN and some external connections."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Infrastructure Engineer"
+        "result": "Infrastructure Engineer",
+        "description": "Infrastructure Engineer is a person who, thanks to its abilities, can implement solutions for digital networks and systems and then maintain and coordinate them so that they fulfill the proper task."
       }
     ]
   },
@@ -36,7 +38,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "IT infrastructure Administrator"
+        "result": "IT infrastructure Administrator",
+        "description": "IT Infrastructure Administartor is a person who deals with IT infrastructure and network systems from within the company. It supports users and makes sure that everything runs smoothly."
       },
       {
         "text": "No",
@@ -51,12 +54,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Helpdesk Analyst"
+        "result": "Helpdesk Analyst",
+        "description": "Help Desk Analyst is a person who is responsible for helping others. First, it accepts problem resgistration, then diagnoses it and provides a solution for it. It is also the person who supervises and secures the proper operation of the equipment."
       },
       {
         "text": "No",
         "next": null,
-        "result": "System Analyst"
+        "result": "System Analyst",
+        "description": "System analyst is a person who undertakes analysis as well as designs and implements IT systems. Such a person must, based on the evaluation of the system's operation and cooperation with its users, achieve the results that the company wants to obtain."
       }
     ]
   }

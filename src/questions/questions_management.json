@@ -10,7 +10,8 @@
       {
         "text": "No",
         "next": null,
-        "result": "Product Manager"
+        "result": "Product Manager",
+        "description": "Product Manager is a person who takes care of the entire product, from its creation to sale, who is responsible for the quality, price and market analysis."
       }
     ]
   },
@@ -21,12 +22,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Project Manager"
+        "result": "Project Manager",
+        "description": "Project Manager is a perosn that mainly manages the project, but not only takes care of good planning, but also its execution. This person has to manage budget, time and monitors risks. What is more, in this job it is important to have a very good attitude to people."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Scrum Master"
+        "result": "Scrum Master",
+        "description": "Scrum Master is a person that is responsible for the success of scrum of the group. This person must support its team and remove obstacles that arise by caring for all memebers of the project."
       }
     ]
   }

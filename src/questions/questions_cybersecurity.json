@@ -20,7 +20,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Security Engineer"
+        "result": "Security Engineer",
+        "description": "Security Engineer is a person which responsible not only for planning, but also for implementing security strategy and then maintaining all security solutions."
       },
       {
         "text": "No",
@@ -35,12 +36,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "IT Security Specialist"
+        "result": "IT Security Specialist",
+        "description": "IT Security Specialist is a person whose job is to develop and maitain an infrastucture that will protect system. What is more, this person also has to carry out control tests, analyse results and monitore whole system."
       },
       {
         "text": "No",
         "next": null,
-        "result": "IT Security Specialist"
+        "result": "IT infrastructure Administrator",
+        "description": "IT Infrastructure Administartor is a person who deals with IT infrastructure and network systems from within the company. It supports users and makes sure that everything runs smoothly."
       }
     ]
   },
@@ -51,12 +54,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Network Engineer"
+        "result": "Network Engineer",
+        "description": "Network Engineer is a person responsible for the design and configuration of networks, including LAN, WAN and some external connections."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Infrastructure Engineer"
+        "result": "Infrastructure Engineer",
+        "description": "Infrastructure Engineer is a person who, thanks to its abilities, can implement solutions for digital networks and systems and then maintain and coordinate them so that they fulfill the proper task."
       }
     ]
   }

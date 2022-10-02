@@ -20,7 +20,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Mobile Developer"
+        "result": "Mobile Developer",
+        "description": "Mobile Developer is a person that specializes in the developemnt and improvement of software system that is adapted to mobile devices. Possible paths are working on iOS or Android system. "
       },
       {
         "text": "No",
@@ -49,12 +50,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Front-end Developer"
+        "result": "Front-end Developer",
+        "description": "Front-end Developer is a person responsible for the appearance and development of the user interface of the websites for many devices. "
       },
       {
         "text": "No",
         "next": null,
-        "result": "Web Developer"
+        "result": "Web Developer",
+        "description": "Web Developer is a person that specializes in websites and web applications development. What is more, part of their job is to taking care of proper functioning of website form programming point of view. For them it is important to know programming languages like HTML / CSS, C #, Ruby or PHP."
       }
     ]
   },
@@ -65,7 +68,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Mobile Developer"
+        "result": "Mobile Developer",
+        "description": "Mobile Developer is a person that specializes in the developemnt and improvement of software system that is adapted to mobile devices. Possible paths are working on iOS or Android system. "
       },
       {
         "text": "No",
@@ -80,7 +84,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Game Developer"
+        "result": "Game Developer",
+        "description": "Game Developer is a person that is working on planning, designing, but mostly implementing video games for different devices and consoles with help of game engins and programming languages."
       },
       {
         "text": "No",
@@ -95,7 +100,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Fill-stack Developer"
+        "result": "Full-stack Developer",
+        "description": "Full-stack developer is a person that deals not only about visal aspects of a product, but also about logical mechanics, its operations, server and databases. So we can call it a person that is responsible for everything."
       },
       {
         "text": "No",
@@ -110,7 +116,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Cloud Engineer"
+        "result": "Cloud Engineer",
+        "description": "Cloud Engineer is a person whose job is to take care of the cloud computing. They have to plan, manage and design cloud-based internet services."
       },
       {
         "text": "No",
@@ -125,12 +132,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Front-end Developer"
+        "result": "Front-end Developer",
+        "description": "Front-end Developer is a person responsible for the appearance and development of the user interface of the websites for many devices. "
       },
       {
         "text": "No",
         "next": null,
-        "result": "Web Developer"
+        "result": "Web Developer",
+        "description": "Web Developer is a person that specializes in websites and web applications development. What is more, part of their job is to taking care of proper functioning of website form programming point of view. For them it is important to know programming languages like HTML / CSS, C #, Ruby or PHP."
       }
     ]
   },
@@ -141,7 +150,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Artificial Intelligence Engineer"
+        "result": "Artificial Intelligence Engineer",
+        "description": "Artificial Intelligence Engineer is the person who is responsible for optimizing the models so that the model can be placed on the market. They care for the purity of the code and maintenance of the technical side of the solution in accordance with good practice."
       },
       {
         "text": "No",
@@ -156,12 +166,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "DevOps Engineer"
+        "result": "DevOps Engineer",
+        "description": "DevOps Engineer is a person that works with two components of software: its development and maintanance. This person produces software and then manage related systems."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Back-end Developer"
+        "result": "Back-end Developer",
+        "description": "Back-end Developer is a person that takes care of application or website from behind, so creates and develops solutions in services thanks to APIs."
       }
     ]
   }

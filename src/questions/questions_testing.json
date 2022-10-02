@@ -6,7 +6,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "QA Engineer"
+        "result": "QA Engineer",
+        "description": "QA Engineer is someone much more then person that is working with testing. That person takes care of the highest quality of the code, analyses the results of testing and creates plan for it."
       },
       {
         "text": "No",
@@ -21,12 +22,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Test Automation Engineer"
+        "result": "Test Automation Engineer",
+        "description": "Test Automation Engineer is a person that based on the test procedure prepares test written in one of programming language or with a help of automation tool to make them possible to execute without human assistance."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Manual Tester"
+        "result": "Manual Tester",
+        "description": "Manual tester is a person that checks if the software is working as it should and performs the test manually."
       }
     ]
   }

@@ -20,7 +20,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Database Administrator"
+        "result": "Database Administrator",
+        "description": "Database Administrator is a person responsible for creating databases, but above all for managing them. Such a person must ensure that the data is up-to-date, well allocated in memory and accessible only for proper users."
       },
       {
         "text": "No",
@@ -49,7 +50,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Data Architect"
+        "result": "Data Architect",
+        "description": "Data Architect is a person who cares about the good design, implementation and management of the data architecture that is used in project in a given organization."
       },
       {
         "text": "No",
@@ -64,12 +66,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Machine Learning Engineer"
+        "result": "Machine Learning Engineer",
+        "description": "Machine Learning Engineer it is a person who, thanks to their programming skills, can quickly process data and then use them to program the entire logic of the model and ensure its integration with the user."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Data Scientist"
+        "result": "Data Scientist",
+        "description": "Data Scientist this is a person who must not only analyze data well, and thus know statistics, but also prepare them for analysis, so must also know programming languages."
       }
     ]
   },
@@ -84,7 +88,8 @@
       {
         "text": "No",
         "next": null,
-        "result": "Data Analyst"
+        "result": "Data Analyst",
+        "description": "Data Analyst it is a person responsible for selecting appropriate data, visualizing it and interpreting it so that it is beneficial for the business."
       }
     ]
   },
@@ -95,7 +100,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Cloud Engineer"
+        "result": "Cloud Engineer",
+        "description": "Cloud Engineer is a person whose job is to take care of the cloud computing. They have to plan, manage and design cloud-based internet services."
       },
       {
         "text": "No",
@@ -110,12 +116,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Business Intelligence Developer"
+        "result": "Business Intelligence Developer",
+        "description": "Business Intelligence Developer is a person who, thanks to the knowledge of appropriate tools, creates new solutions for processing and storing databases, as well as deals with their development and maintenance."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Business Analyst"
+        "result": "Business Analyst",
+        "description": "Business Analyst is a person who analyzes business processes in a company. This person is responsible for monitoring and picking up potential problems and also should be responsible for the relationship between the client and other stakeholders."
       }
     ]
   },
@@ -126,7 +134,8 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Artificial Intelligence Engineer"
+        "result": "Artificial Intelligence Engineer",
+        "description": "Artificial Intelligence Engineer is the person who is responsible for optimizing the models so that the model can be placed on the market. They care for the purity of the code and maintenance of the technical side of the solution in accordance with good practice."
       },
       {
         "text": "No",
@@ -141,12 +150,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Database Developer"
+        "result": "Database Developer",
+        "description": "Database Developer this is a person who typically creates and modifies databases using an interpreted programming language."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Data Developer"
+        "result": "Data Engineer",
+        "description": "Data Engineer is a person dealing with the pre-processing and processing of raw data. On the basis of their actions, they must create useful data, which then could be used further."
       }
     ]
   }
