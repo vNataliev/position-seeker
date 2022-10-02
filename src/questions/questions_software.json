@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "question": "Do you see yourself at work where you mainly deal with the visual aspects?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": 2
+      },
+      {
+        "text": "No",
+        "next": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Do you prefer to create solutions for mobile devices rather than for the web?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Mobile Developer"
+      },
+      {
+        "text": "No",
+        "next": 4
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Would you like to work a lot with markup languages?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": 5
+      },
+      {
+        "text": "No",
+        "next": 6
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Do you want to focus only on the visual aspects of the website or also on issues related to the performance and capacity ??",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Front-end Developer"
+      },
+      {
+        "text": "No",
+        "next": null,
+        "result": "Web Developer"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Do you prefer to create solutions for mobile devices rather than for the web?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Mobile Developer"
+      },
+      {
+        "text": "No",
+        "next": 7
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Are you fascinated by games and want to see your future with it?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Game Developer"
+      },
+      {
+        "text": "No",
+        "next": 8
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Do you see yourself working with all the software and not just the website?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Fill-stack Developer"
+      },
+      {
+        "text": "No",
+        "next": 9
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Do you want to focus only on the visual aspects of the website or also on issues related to the performance and capacity ?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Cloud Engineer"
+      },
+      {
+        "text": "No",
+        "next": 10
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Do you have knowledge of cloud solutions and would you like to work with them?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Front-end Developer"
+      },
+      {
+        "text": "No",
+        "next": null,
+        "result": "Web Developer"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Do you want to build solutions based on artificial intelligence?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "Artificial Intelligence Engineer"
+      },
+      {
+        "text": "No",
+        "next": 11
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Would you like to deal with business issues in addition to programming?",
+    "answers": [
+      {
+        "text": "Yes",
+        "next": null,
+        "result": "DevOps Engineer"
+      },
+      {
+        "text": "No",
+        "next": null,
+        "result": "Back-end Developer"
+      }
+    ]
+  }
+]
