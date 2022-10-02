@@ -1,0 +1,128 @@
+[
+    {
+        "question": "Are you interested in programming?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 7, 
+                "score_it_infra": 4,
+                "score_design": 0,
+                "score_data": 6,
+                "score_cybersecurity":4,
+                "score_management": 0,
+                "score_testing": 5
+            },
+            {
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "question": "Do you like to designing or building a company's network and its system infrastructure?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 6, 
+                "score_it_infra": 7,
+                "score_design": 0,
+                "score_data": 0,
+                "score_cybersecurity": 6,
+                "score_management": 0,
+                "score_testing": 4
+            },
+            {
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "question": "Are you good at working with people and do you easily understand their needs?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 0, 
+                "score_it_infra": 0,
+                "score_design": 7,
+                "score_data": 5,
+                "score_cybersecurity": 0,
+                "score_management": 6,
+                "score_testing": 0
+            },
+            {
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "question": "Do you like data analysis?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 5, 
+                "score_it_infra": 5,
+                "score_design": 4,
+                "score_data": 7,
+                "score_cybersecurity": 0,
+                "score_management": 5,
+                "score_testing": 0
+            },
+            {
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "question": "Would you like to take care of the safety of others and the company?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 0, 
+                "score_it_infra": 6,
+                "score_design": 0,
+                "score_data": 0,
+                "score_cybersecurity": 7,
+                "score_management": 4,
+                "score_testing": 6
+            },
+            {
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "question": "Would you like to deal with people management?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 0, 
+                "score_it_infra": 0,
+                "score_design": 6,
+                "score_data": 0,
+                "score_cybersecurity": 0,
+                "score_management": 7,
+                "score_testing": 0
+            },
+            {
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "question": "Do you pay attention to details and like to test the created solutions?",
+        "answers": [
+            {
+                "text": "Yes", 
+                "score_software": 7, 
+                "score_it_infra": 0,
+                "score_design": 5,
+                "score_data": 4,
+                "score_cybersecurity": 5,
+                "score_management": 0,
+                "score_testing": 7
+            },
+            {
+                "text": "No"
+            }
+        ]
+    }
+]
