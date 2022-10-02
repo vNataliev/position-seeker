@@ -11,6 +11,7 @@ import QuestionsTesting from "../src/questions/questions_testing.json";
 
 function App() {
 
+  const [showStart, setShowStart] = useState(true);
   const [showResults, setShowResults] = useState(false);
   const [result, setResult] = useState(0);
   const [showPreliminaryQuestions, setPreliminaryQuestions] = useState(true);
@@ -36,7 +37,12 @@ function App() {
     }
   }
 
-  const restartGame = () => {
+  const startQuiz = () => {
+    setShowStart(false);
+  }
+
+  const restartQuiz = () => {
+    setShowStart(true);
     setShowResults(false);
     setCurrentQuestion(0);
     setCurrentPreliminaryQuestion(0);
@@ -47,46 +53,61 @@ function App() {
     
     <div className="App">
 
-      {showResults ? (
+      {showStart ? (
 
-        <div className="final-results">
-          <h1>Final Results</h1>
-          <h3>{result}</h3>
-          <h3>{description}</h3>
-          <button onClick={() => restartGame()}>Restart game</button>
+        <div className="start-page">
+          <h1>Work position IT seeker</h1>
+          <p>aaa</p>
+          <button onClick={() => startQuiz()}>Start</button>
         </div>
 
-      ) : ( showPreliminaryQuestions ? (
+      ) : ( showResults ? (
 
-        <><h1>Work position IT seeker</h1><h2>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</h2><h3 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h3><ul>
-            {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
-              return (
-                <li
-                  key={option.id}
-                  onClick={() => clickAddingOption()}
-                >
-                  {option.text}
-                </li>
-              );
-            })}
-          </ul></>
+          <div className="final-results">
+            <h1>Final Results</h1>
+            <h3>{result}</h3>
+            <p>{description}</p>
+            <button onClick={() => restartQuiz()}>Restart</button>
+          </div>
 
-      ) : ( 
+        ) : ( showPreliminaryQuestions ? (
 
-        <><h1>Work position IT seeker</h1><h3 className="question-text">{QuestionsCybersecurity[currentQuestion].question}</h3><ul>
-            {QuestionsCybersecurity[currentQuestion].answers.map((option) => {
-              return (
-                <li
-                  key={option.id}
-                  onClick={() => clickTreeOption(option.next, option.result, option.description)}
-                >
-                  {option.text}
-                </li>
-              );
-            })}
-          </ul></>
+          <div className="preliminary-questions">
+            <h1>Work position IT seeker</h1>
+            <h2>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</h2><h3 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h3><ul>
+              {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
+                return (
+                  <li
+                    key={option.id}
+                    onClick={() => clickAddingOption()}
+                  >
+                    {option.text}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
-      ))}
+        ) : ( 
+
+          <div className="tree-questions">
+            <h1>Work position IT seeker</h1>
+            <h3 className="question-text">{QuestionsCybersecurity[currentQuestion].question}</h3><ul>
+              {QuestionsCybersecurity[currentQuestion].answers.map((option) => {
+                return (
+                  <li
+                    key={option.id}
+                    onClick={() => clickTreeOption(option.next, option.result, option.description)}
+                  >
+                    {option.text}
+                  </li>
+                );
+              })}
+            </ul>
+            </div>
+
+        ))
+      )}
         
     </div>
   );
