@@ -112,7 +112,7 @@
         "answers": [
             {
                 "text": "Yes", 
-                "score_software": 7, 
+                "score_software": 4, 
                 "score_it_infra": 0,
                 "score_design": 5,
                 "score_data": 4,
