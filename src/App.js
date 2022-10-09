@@ -29,6 +29,7 @@ function App() {
   const [result, setResult] = useState(0);
   const [category, setCategory] = useState('')
   const [showCategories, setShowCategories] = useState(false)
+  const [showNoCategories, setShowNoCategories] = useState(false)
 
   const lastPreliminaryQuestionConfig = () => {
     setPreliminaryQuestions(false)
@@ -41,7 +42,7 @@ function App() {
       "Managament": scoreManagement,
       "Testing": scoreTesting
     }
-    decideOnGroup()
+    decideCategory()
   }
 
   const clickAddingOption = (text) => {
@@ -63,14 +64,7 @@ function App() {
     } 
   }
 
-  function returnCategories(a,b){
-    console.log(a)
-    console.log(b)
-    return (QuestionsCategory.name === a && QuestionsCategory.name === b);
- }
-
-  const decideOnGroup = () => {
-    console.log(scoreList)
+  const decideCategory = () => {
     let max = {"key": 0}
 
     for(const [key, value] of Object.entries(scoreList)) {
@@ -82,13 +76,15 @@ function App() {
       }
     }
 
-    if(Object.keys(max).length > 1) {
-      // categoriesList = QuestionsCategory.filter(returnCategories(Object.keys(max)[0], Object.keys(max)[1])); 
-      // console.log(categoriesList)
-      setShowCategories(true)
+    if (Object.values(max)[0] === 0) {
+      setShowNoCategories(true);
+    }
 
-    // TODO tutaj odpalić opcję wyświetlenia tego słownika z maxami jesli ich jest wiecej niz jedna kategoria i potem wynik przekazac do setCategory
-    //"Which category sounds the most interesting for you? (Wraz z opisami danej kategorii)
+    if(Object.keys(max).length > 1) {
+      categoriesList = QuestionsCategory.filter(function(value) {
+        return Object.keys(max).includes(value.name);
+      }); 
+      setShowCategories(true);
     }
     else {
       switchCategory(Object.keys(max)[0]);
@@ -139,6 +135,7 @@ function App() {
     setCurrentQuestion(0);
     setCurrentPreliminaryQuestion(0);
     setShowResults(false);
+    setShowNoCategories(false);
     setPreliminaryQuestions(true);
     scoreSoftware = 0
     scoreItInfra = 0
@@ -188,40 +185,49 @@ function App() {
               </ul>
           </div>
         ) : ( 
-        showCategories ? (
-          <div className="categories">
-            <h1>Which category?</h1>
-            <ul>
-              {QuestionsCategory.map((option) => {
-                return (
-                  <li
-                    key={option.id}
-                    onClick={() => {chooseCategory(option.name)}}
-                  >
-                    {option.description}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ) : ( 
-          <div className="tree-questions">
-            <h1>Work position IT seeker</h1>
-            <h3 className="question-text">{category[currentQuestion].question}</h3>
-            <ul>
-                {category[currentQuestion].answers.map((option) => {
-                  return (
-                    <li
-                      key={option.id}
-                      onClick={() => {clickTreeOption(option.next, option.result)}}
-                    >
-                      {option.text}
-                    </li>
-                  );
-                })}
-              </ul>
-          </div>
-      )))
+          showNoCategories ? (
+            <div className="no-categories">
+              <h1>Try again</h1>
+              <h3>Hi, we cannot find a proper IT position for you! Please try again and maybe we will find something for you!</h3>
+              <button onClick={() => restartGame()}>Restart game</button>
+            </div>
+          ) : (
+            showCategories ? (
+              <div className="categories">
+                <h1>Which category sounds the most interesting for you?</h1>
+                <ul>
+                  {categoriesList.map((option) => {
+                    return (
+                      <li
+                        key={option.id}
+                        onClick={() => {chooseCategory(option.name)}}
+                      >
+                        {option.description}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ) : ( 
+              <div className="tree-questions">
+                <h1>Work position IT seeker</h1>
+                <h3 className="question-text">{category[currentQuestion].question}</h3>
+                <ul>
+                    {category[currentQuestion].answers.map((option) => {
+                      return (
+                        <li
+                          key={option.id}
+                          onClick={() => {clickTreeOption(option.next, option.result)}}
+                        >
+                          {option.text}
+                        </li>
+                      );
+                    })}
+                  </ul>
+              </div>
+            )
+          )
+          ))
       }
         
     </div>
