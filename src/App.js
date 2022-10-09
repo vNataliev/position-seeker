@@ -148,88 +148,95 @@ function App() {
   };
 
   return (
-    <div className="App">
-
-      {
-        showResults ? (
-          <div className="final-results">
-            <h1>Final Results</h1>
-            <h3>{result}</h3>
-            <button onClick={() => restartGame()}>Restart game</button>
-          </div>
-        ) : ( 
-        showPreliminaryQuestions ? (
-          <div className="preliminary-questions">
-            <h1>Work position IT seeker</h1>
-            <h2>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</h2>
-            <h3 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h3>
-            <ul>
-                {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
-                  return (
-                    <li
-                      key={option.id}
-                      onClick={() => {
-                        if (currentPreliminaryQuestion < QuestionsPreliminary.length - 1) {
-                          clickAddingOption(option.text)
-                        } else {
-                          clickAddingOption(option.text)
-                          lastPreliminaryQuestionConfig()
-                        }
-                      }
-                      }
-                    >
-                      {option.text}
-                    </li>
-                  );
-                })}
-              </ul>
-          </div>
-        ) : ( 
-          showNoCategories ? (
-            <div className="no-categories">
-              <h1>Try again</h1>
-              <h3>Hi, we cannot find a proper IT position for you! Please try again and maybe we will find something for you!</h3>
-              <button onClick={() => restartGame()}>Restart game</button>
+    <div class="backgorund">
+      <h1>IT work position seeker</h1>
+      <br></br>
+        <div class="quiz-container">
+        {
+          showResults ? (
+            <div class="container-md">
+              <h4>Final Results</h4>
+              <br></br>
+              <h2>{result}</h2>
+              <br></br>
+              <button type="button" class="btn btn-secondary" onClick={() => restartGame()}>Restart game</button>
             </div>
-          ) : (
-            showCategories ? (
-              <div className="categories">
-                <h1>Which category sounds the most interesting for you?</h1>
-                <ul>
-                  {categoriesList.map((option) => {
+          ) : ( 
+          showPreliminaryQuestions ? (
+            <div class="container-md">
+              <p>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</p>
+              <h5 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h5>
+              <br></br>
+              <ul class="list-group">
+                  {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
                     return (
-                      <li
+                      <li class="list-group-item"
                         key={option.id}
-                        onClick={() => {chooseCategory(option.name)}}
+                        onClick={() => {
+                          if (currentPreliminaryQuestion < QuestionsPreliminary.length - 1) {
+                            clickAddingOption(option.text)
+                          } else {
+                            clickAddingOption(option.text)
+                            lastPreliminaryQuestionConfig()
+                          }
+                        }
+                        }
                       >
-                        {option.description}
+                        {option.text}
                       </li>
                     );
                   })}
                 </ul>
+            </div>
+          ) : ( 
+            showNoCategories ? (
+              <div class="container-md">
+                <h3>Try again</h3>
+                <br></br>
+                <p>Hi, we cannot find a proper IT position for you! Please try again and maybe we will find something for you!</p>
+                <br></br>
+                <button type="button" class="btn btn-secondary" onClick={() => restartGame()}>Restart game</button>
               </div>
-            ) : ( 
-              <div className="tree-questions">
-                <h1>Work position IT seeker</h1>
-                <h3 className="question-text">{category[currentQuestion].question}</h3>
-                <ul>
-                    {category[currentQuestion].answers.map((option) => {
+            ) : (
+              showCategories ? (
+                <div class="container-md">
+                  <h3>Which category sounds the most interesting for you?</h3>
+                  <br></br>
+                  <ul class="list-group">
+                    {categoriesList.map((option) => {
                       return (
-                        <li
+                        <li class="list-group-item"
                           key={option.id}
-                          onClick={() => {clickTreeOption(option.next, option.result)}}
+                          onClick={() => {chooseCategory(option.name)}}
                         >
-                          {option.text}
+                          <b>{option.name}</b><br></br><i>{option.description}</i>
                         </li>
                       );
                     })}
                   </ul>
-              </div>
+                </div>
+              ) : ( 
+                <div class="container-md">
+                  <h3 className="question-text">{category[currentQuestion].question}</h3>
+                  <br></br>
+                  <ul class="list-group">
+                      {category[currentQuestion].answers.map((option) => {
+                        return (
+                          <li class="list-group-item"
+                            key={option.id}
+                            onClick={() => {clickTreeOption(option.next, option.result)}}
+                          >
+                            {option.text}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                </div>
+              )
             )
-          )
-          ))
-      }
-        
+            ))
+        }
+      </div>
     </div>
   );
 }
