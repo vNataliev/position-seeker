@@ -18,6 +18,7 @@ let scoreCybersecurity = 0
 let scoreManagement = 0
 let scoreTesting = 0
 let scoreList = []
+var categoriesList = []
 
 function App() {
 
@@ -58,12 +59,15 @@ function App() {
         scoreTesting += path.score_testing
 
       }
-
-      // dodać punkty za "nie" ("No")
-
       setCurrentPreliminaryQuestion(currentPreliminaryQuestion + 1)
     } 
   }
+
+  function returnCategories(a,b){
+    console.log(a)
+    console.log(b)
+    return (QuestionsCategory.name === a && QuestionsCategory.name === b);
+ }
 
   const decideOnGroup = () => {
     console.log(scoreList)
@@ -79,42 +83,49 @@ function App() {
     }
 
     if(Object.keys(max).length > 1) {
+      // categoriesList = QuestionsCategory.filter(returnCategories(Object.keys(max)[0], Object.keys(max)[1])); 
+      // console.log(categoriesList)
       setShowCategories(true)
 
-      // TODO tutaj odpalić opcję wyświetlenia tego słownika z maxami jesli ich jest wiecej niz jedna kategoria i potem wynik przekazac do setCategory
+    // TODO tutaj odpalić opcję wyświetlenia tego słownika z maxami jesli ich jest wiecej niz jedna kategoria i potem wynik przekazac do setCategory
     //"Which category sounds the most interesting for you? (Wraz z opisami danej kategorii)
     }
     else {
-      console.log(Object.keys(max)[0])
-      switch(Object.keys(max)[0]){
-        case 'Software':
-          setCategory(QuestionsSoftware);
-          break;
-        case 'IT Infrastructure':
-          setCategory(QuestionsInfrastructure);
-          break;
-        case 'Design':
-          setCategory(QuestionsDesign);
-          break;
-        case 'Data':
-          setCategory(QuestionsData);
-          break;
-        case 'Cybersecurity':
-          setCategory(QuestionsCybersecurity);
-          break;
-        case 'Managament':
-          setCategory(QuestionsManagement);
-          break;
-        case 'Testing':
-          setCategory(QuestionsTesting);
-          break;
-      }
-    }
-    console.log(category)
-    
+      switchCategory(Object.keys(max)[0]);
+    }    
   }
 
-   
+  const switchCategory = (categoryNameOption) => {
+    switch(String(categoryNameOption)){
+      case 'Software':
+        setCategory(QuestionsSoftware);
+        break;
+      case 'IT Infrastructure':
+        setCategory(QuestionsInfrastructure);
+        break;
+      case 'Design':
+        setCategory(QuestionsDesign);
+        break;
+      case 'Data':
+        setCategory(QuestionsData);
+        break;
+      case 'Cybersecurity':
+        setCategory(QuestionsCybersecurity);
+        break;
+      case 'Managament':
+        setCategory(QuestionsManagement);
+        break;
+      case 'Testing':
+        setCategory(QuestionsTesting);
+        break;
+    }
+  }
+
+  const chooseCategory = (categoryOption) => {
+    switchCategory(categoryOption);
+    setShowCategories(false);
+  }
+
   const clickTreeOption = (nextOption, resultOption) => {
     if (nextOption != null) {
       setCurrentQuestion(nextOption-1);
@@ -125,23 +136,21 @@ function App() {
   }
 
   const restartGame = () => {
-    // setCurrentQuestion(0);
-    // setCurrentPreliminaryQuestion(0);
-    // setShowResults(false);
-    // setPreliminaryQuestions(true);
-    // setScoreSoftware(0);
-    // setScoreItInfra(0);
-    // setScoreDesign(0);
-    // setScoreData(0);
-    // setScoreCybersecurity(0);
-    // setScoreManagement(0);
-    // setScoreTesting(0);
-   // setScoreList(0);
+    setCurrentQuestion(0);
+    setCurrentPreliminaryQuestion(0);
+    setShowResults(false);
+    setPreliminaryQuestions(true);
+    scoreSoftware = 0
+    scoreItInfra = 0
+    scoreDesign = 0
+    scoreData = 0
+    scoreCybersecurity = 0
+    scoreManagement = 0
+    scoreTesting = 0
+    scoreList = []
   };
 
   return (
-    
-
     <div className="App">
 
       {
@@ -153,61 +162,65 @@ function App() {
           </div>
         ) : ( 
         showPreliminaryQuestions ? (
-          <><h1>Work position IT seeker</h1>
-          <h2>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</h2>
-          <h3 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h3>
-          <ul>
-              {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
-                return (
-                  <li
-                    key={option.id}
-                    onClick={() => {
-                      if (currentPreliminaryQuestion < QuestionsPreliminary.length - 1) {
-                        clickAddingOption(option.text)
-                      } else {
-                        clickAddingOption(option.text)
-                        lastPreliminaryQuestionConfig()
+          <div className="preliminary-questions">
+            <h1>Work position IT seeker</h1>
+            <h2>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</h2>
+            <h3 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h3>
+            <ul>
+                {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
+                  return (
+                    <li
+                      key={option.id}
+                      onClick={() => {
+                        if (currentPreliminaryQuestion < QuestionsPreliminary.length - 1) {
+                          clickAddingOption(option.text)
+                        } else {
+                          clickAddingOption(option.text)
+                          lastPreliminaryQuestionConfig()
+                        }
                       }
-                    }
-                    }
-                  >
-                    {option.text}
-                  </li>
-                );
-              })}
-            </ul></>
+                      }
+                    >
+                      {option.text}
+                    </li>
+                  );
+                })}
+              </ul>
+          </div>
         ) : ( 
         showCategories ? (
-            <>
+          <div className="categories">
             <h1>Which category?</h1>
             <ul>
               {QuestionsCategory.map((option) => {
                 return (
                   <li
                     key={option.id}
-                    onClick={() => {}}
+                    onClick={() => {chooseCategory(option.name)}}
                   >
                     {option.description}
                   </li>
                 );
               })}
             </ul>
-            </>
+          </div>
         ) : ( 
-          <><h1>Work position IT seeker</h1>
-          <h3 className="question-text">{category[currentQuestion].question}</h3>
-          <ul>
-              {category[currentQuestion].answers.map((option) => {
-                return (
-                  <li
-                    key={option.id}
-                    onClick={() => {clickTreeOption(option.next, option.result)}}
-                  >
-                    {option.text}
-                  </li>
-                );
-              })}
-            </ul></>
+          <div className="tree-questions">
+            <h1>Work position IT seeker</h1>
+            <h3 className="question-text">{category[currentQuestion].question}</h3>
+            <ul>
+                {category[currentQuestion].answers.map((option) => {
+                  return (
+                    <li
+                      key={option.id}
+                      onClick={() => {clickTreeOption(option.next, option.result)}}
+                    >
+                      {option.text}
+                    </li>
+                  );
+                })}
+              </ul>
+          </div>
       )))
       }
         
