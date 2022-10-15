@@ -31,6 +31,7 @@ function App() {
   const [category, setCategory] = useState('')
   const [showCategories, setShowCategories] = useState(false)
   const [showNoCategories, setShowNoCategories] = useState(false)
+  const [showCategoriesReturn, setShowCategoriesReturn] = useState(false)
 
   const lastPreliminaryQuestionConfig = () => {
     setPreliminaryQuestions(false)
@@ -86,6 +87,7 @@ function App() {
         return Object.keys(max).includes(value.name);
       }); 
       setShowCategories(true);
+      setShowCategoriesReturn(true);
     }
     else {
       switchCategory(Object.keys(max)[0]);
@@ -133,6 +135,12 @@ function App() {
     }
   }
 
+  const tryOtherCategory = () => {
+    setShowCategories(true);
+    setShowResults(false);
+    setCurrentQuestion(0);
+  }
+
   const restartQuiz = () => {
     setCurrentQuestion(0);
     setCurrentPreliminaryQuestion(0);
@@ -156,16 +164,28 @@ function App() {
         <div class="quiz-container">
         {
           showResults ? (
-            <div class="container-md">
-              <h4>Final result</h4>
-              <br></br>
-              <h2>{result}</h2>
-              <br></br>
-              <h5>{description}</h5>
-              <br></br>
-              <button type="button" class="btn btn-secondary" onClick={() => restartQuiz()}>Restart quiz</button>
-            </div>
-          ) : ( 
+            showCategoriesReturn ? (
+              <div class="container-md">
+                <h4>Final result</h4>
+                <br></br>
+                <h2>{result}</h2>
+                <br></br>
+                <h5>{description}</h5>
+                <br></br>
+                <button type="button" class="btn btn-secondary" onClick={() => restartQuiz()}>Restart quiz</button>
+                <button type="button" class="btn btn-secondary" onClick={() => tryOtherCategory()}>Try other category</button>
+              </div>
+            ) : (
+              <div class="container-md">
+                <h4>Final result</h4>
+                <br></br>
+                <h2>{result}</h2>
+                <br></br>
+                <h5>{description}</h5>
+                <br></br>
+                <button type="button" class="btn btn-secondary" onClick={() => restartQuiz()}>Restart quiz</button>
+              </div>
+          )) : ( 
           showPreliminaryQuestions ? (
             <div class="container-md">
               <p>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</p>
