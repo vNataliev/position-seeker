@@ -89,7 +89,7 @@
         "text": "No",
         "next": null,
         "result": "Data Analyst",
-        "description": "Data Analyst it is a person responsible for selecting appropriate data, visualizing it and interpreting it so that it is beneficial for the business."
+        "description": "Data Analyst is a person responsible for selecting appropriate data, visualizing it and interpreting it so that it is beneficial for the business."
       }
     ]
   },
@@ -135,7 +135,7 @@
         "text": "Yes",
         "next": null,
         "result": "Artificial Intelligence Engineer",
-        "description": "Artificial Intelligence Engineer is the person who is responsible for optimizing the models so that the model can be placed on the market. They care for the purity of the code and maintenance of the technical side of the solution in accordance with good practice."
+        "description": "Artificial Intelligence Engineer is a person who is responsible for optimizing the models so that the model can be placed on the market. They care for the purity of the code and maintenance of the technical side of the solution in accordance with good practice."
       },
       {
         "text": "No",

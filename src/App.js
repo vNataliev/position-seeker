@@ -27,6 +27,7 @@ function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [result, setResult] = useState(0);
+  const [description, setDescription] = useState('');
   const [category, setCategory] = useState('')
   const [showCategories, setShowCategories] = useState(false)
   const [showNoCategories, setShowNoCategories] = useState(false)
@@ -39,7 +40,7 @@ function App() {
       "Design": scoreDesign,
       "Data": scoreData,
       "Cybersecurity": scoreCybersecurity,
-      "Managament": scoreManagement,
+      "Management": scoreManagement,
       "Testing": scoreTesting
     }
     decideCategory()
@@ -108,7 +109,7 @@ function App() {
       case 'Cybersecurity':
         setCategory(QuestionsCybersecurity);
         break;
-      case 'Managament':
+      case 'Management':
         setCategory(QuestionsManagement);
         break;
       case 'Testing':
@@ -122,16 +123,17 @@ function App() {
     setShowCategories(false);
   }
 
-  const clickTreeOption = (nextOption, resultOption) => {
+  const clickTreeOption = (nextOption, resultOption, resultDescription) => {
     if (nextOption != null) {
       setCurrentQuestion(nextOption-1);
     } else {
       setResult(resultOption);
+      setDescription(resultDescription);
       setShowResults(true);
     }
   }
 
-  const restartGame = () => {
+  const restartQuiz = () => {
     setCurrentQuestion(0);
     setCurrentPreliminaryQuestion(0);
     setShowResults(false);
@@ -155,11 +157,13 @@ function App() {
         {
           showResults ? (
             <div class="container-md">
-              <h4>Final Results</h4>
+              <h4>Final result</h4>
               <br></br>
               <h2>{result}</h2>
               <br></br>
-              <button type="button" class="btn btn-secondary" onClick={() => restartGame()}>Restart game</button>
+              <h5>{description}</h5>
+              <br></br>
+              <button type="button" class="btn btn-secondary" onClick={() => restartQuiz()}>Restart quiz</button>
             </div>
           ) : ( 
           showPreliminaryQuestions ? (
@@ -195,7 +199,7 @@ function App() {
                 <br></br>
                 <p>Hi, we cannot find a proper IT position for you! Please try again and maybe we will find something for you!</p>
                 <br></br>
-                <button type="button" class="btn btn-secondary" onClick={() => restartGame()}>Restart game</button>
+                <button type="button" class="btn btn-secondary" onClick={() => restartQuiz()}>Restart quiz</button>
               </div>
             ) : (
               showCategories ? (
@@ -224,7 +228,7 @@ function App() {
                         return (
                           <li class="list-group-item"
                             key={option.id}
-                            onClick={() => {clickTreeOption(option.next, option.result)}}
+                            onClick={() => {clickTreeOption(option.next, option.result, option.description)}}
                           >
                             {option.text}
                           </li>
