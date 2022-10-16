@@ -45,7 +45,7 @@
   },
   {
     "id": 4,
-    "question": "Are you interested in topics related to human- computer interaction ?",
+    "question": "Are you interested in topics related to human - computer interaction ?",
     "answers": [
       {
         "text": "Yes",
@@ -93,7 +93,7 @@
   },
   {
     "id": 7,
-    "question": "Are the user experiences much more importnat to you than the aestehetic aspects?",
+    "question": "Are the user experiences much more important to you than the aestehetic aspects?",
     "answers": [
       {
         "text": "Yes",
