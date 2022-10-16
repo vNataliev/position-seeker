@@ -7,6 +7,10 @@ body {
   background-color: #ececec;
 }
 
+button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .quiz-container {
   padding: 30px 0;
   width: 800px;
