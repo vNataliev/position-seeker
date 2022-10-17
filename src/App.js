@@ -34,7 +34,7 @@ function App() {
   const [category, setCategory] = useState('')
   const [showCategories, setShowCategories] = useState(true)
   const [showNoCategories, setShowNoCategories] = useState(false)
-  const [showCategoriesReturn, setShowCategoriesReturn] = useState(false)
+  const [showCategoriesReturn, setShowCategoriesReturn ] = useState(false)
 
   const lastPreliminaryQuestionConfig = () => {
     setPreliminaryQuestions(false)
@@ -97,6 +97,7 @@ function App() {
     }
     else {
       textForCategories = textForOneCategory
+      setShowCategoriesReturn(false);
     }    
   }
 
@@ -195,7 +196,7 @@ function App() {
           )) : ( 
           showPreliminaryQuestions ? (
             <div class="container-md">
-              <h3>Premilinary Questions Section [{currentPreliminaryQuestion + 1}/{QuestionsPreliminary.length}]</h3>
+              <h3>Preliminary Questions Section [{currentPreliminaryQuestion + 1}/{QuestionsPreliminary.length}]</h3>
               <br></br>
               <h5 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h5>
               <br></br>

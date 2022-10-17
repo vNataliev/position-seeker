@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "question": "Do you feel comfortable with managing people?",
+    "question": "Do you prefer to create the vision of a product rather than making sure it is executed properly on time?",
     "answers": [
       {
         "text": "Yes",
-        "next": 2
-      },
-      {
-        "text": "No",
         "next": null,
         "result": "Product Manager",
         "description": "Product Manager is a person who takes care of the entire product, from its creation to sale, who is responsible for the quality, price and market analysis."
+      },
+      {
+        "text": "No",
+        "next": 2
       }
     ]
   },
