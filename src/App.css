@@ -14,12 +14,15 @@ button {
 .quiz-container {
   padding: 30px 0;
   width: 800px;
-  margin-left: 10em;
-  margin-right: 10em;
+  margin: 0 20px 20px 20px;
   text-align: center;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+}
+
+h1 {
+  margin: 30px 0 0 0;
 }
 
 .backgorund {

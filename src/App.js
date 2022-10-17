@@ -17,6 +17,9 @@ let scoreData = 0
 let scoreCybersecurity = 0
 let scoreManagement = 0
 let scoreTesting = 0
+let textForCategories = ""
+let textForOneCategory = "We have found a matching category for you! Now please answer some additional questions."
+let textForMultipleCategory = "We have found matching categories for you! Choose the most interesting and answer any additional questions."
 let scoreList = []
 var categoriesList = []
 
@@ -29,7 +32,7 @@ function App() {
   const [result, setResult] = useState(0);
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('')
-  const [showCategories, setShowCategories] = useState(false)
+  const [showCategories, setShowCategories] = useState(true)
   const [showNoCategories, setShowNoCategories] = useState(false)
   const [showCategoriesReturn, setShowCategoriesReturn] = useState(false)
 
@@ -80,17 +83,20 @@ function App() {
 
     if (Object.values(max)[0] === 0) {
       setShowNoCategories(true);
+      setShowCategories(false);
     }
 
+    setShowCategoriesReturn(true);
+    setShowCategories(true);
+    categoriesList = QuestionsCategory.filter(function(value) {
+      return Object.keys(max).includes(value.name);
+    });
+
     if(Object.keys(max).length > 1) {
-      categoriesList = QuestionsCategory.filter(function(value) {
-        return Object.keys(max).includes(value.name);
-      }); 
-      setShowCategories(true);
-      setShowCategoriesReturn(true);
+      textForCategories = textForMultipleCategory
     }
     else {
-      switchCategory(Object.keys(max)[0]);
+      textForCategories = textForOneCategory
     }    
   }
 
@@ -155,6 +161,7 @@ function App() {
     scoreManagement = 0
     scoreTesting = 0
     scoreList = []
+    textForCategories = ""
   };
 
   return (
@@ -188,13 +195,14 @@ function App() {
           )) : ( 
           showPreliminaryQuestions ? (
             <div class="container-md">
-              <p>Question: {currentPreliminaryQuestion + 1} out of {QuestionsPreliminary.length}</p>
+              <h3>Premilinary Questions Section [{currentPreliminaryQuestion + 1}/{QuestionsPreliminary.length}]</h3>
+              <br></br>
               <h5 className="question-text">{QuestionsPreliminary[currentPreliminaryQuestion].question}</h5>
               <br></br>
               <ul class="list-group">
                   {QuestionsPreliminary[currentPreliminaryQuestion].answers.map((option) => {
                     return (
-                      <li class="list-group-item"
+                      <a href="#" class="list-group-item list-group-item-action"
                         key={option.id}
                         onClick={() => {
                           if (currentPreliminaryQuestion < QuestionsPreliminary.length - 1) {
@@ -207,7 +215,7 @@ function App() {
                         }
                       >
                         {option.text}
-                      </li>
+                      </a>
                     );
                   })}
                 </ul>
@@ -224,24 +232,26 @@ function App() {
             ) : (
               showCategories ? (
                 <div class="container-md">
-                  <h3>Which category sounds the most interesting for you?</h3>
+                  <h3>{textForCategories}</h3>
                   <br></br>
                   <ul class="list-group">
                     {categoriesList.map((option) => {
                       return (
-                        <li class="list-group-item"
+                        <a href="#" class="list-group-item list-group-item-action"
                           key={option.id}
                           onClick={() => {chooseCategory(option.name)}}
                         >
                           <b>{option.name}</b><br></br><i>{option.description}</i>
-                        </li>
+                        </a>
                       );
                     })}
                   </ul>
                 </div>
               ) : ( 
                 <div class="container-md">
-                  <h3 className="question-text">{category[currentQuestion].question}</h3>
+                  <h4>Additional Questions Section</h4>
+                  <br></br>
+                  <h5 className="question-text">{category[currentQuestion].question}</h5>
                   <br></br>
                   <ul class="list-group">
                       {category[currentQuestion].answers.map((option) => {
