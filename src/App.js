@@ -19,7 +19,7 @@ let scoreManagement = 0
 let scoreTesting = 0
 let textForCategories = ""
 let textForOneCategory = "We have found a matching category for you! Now please answer some additional questions."
-let textForMultipleCategory = "We have found matching categories for you! Choose the most interesting and answer any additional questions."
+let textForMultipleCategory = "We have found matching categories for you! Choose the most interesting and answer some additional questions."
 let scoreList = []
 var categoriesList = []
 
@@ -257,12 +257,12 @@ function App() {
                   <ul class="list-group">
                       {category[currentQuestion].answers.map((option) => {
                         return (
-                          <li class="list-group-item"
+                          <a href="#" class="list-group-item list-group-item-action"
                             key={option.id}
                             onClick={() => {clickTreeOption(option.next, option.result, option.description)}}
                           >
                             {option.text}
-                          </li>
+                          </a>
                         );
                       })}
                     </ul>
