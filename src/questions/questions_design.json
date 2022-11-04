@@ -150,14 +150,14 @@
       {
         "text": "Yes",
         "next": null,
-        "result": "Front-end Developer",
-        "description": "Front-end Developer is a person responsible for the appearance and development of the user interface of the websites for many devices. "
+        "result": "Web Developer",
+        "description": "Web Developer is a person that specializes in websites and web applications development. What is more, part of their job is to taking care of proper functioning of website form programming point of view. For them it is important to know programming languages like HTML/CSS, C#, Ruby or PHP."
       },
       {
         "text": "No",
         "next": null,
-        "result": "Web Developer",
-        "description": "Web Developer is a person that specializes in websites and web applications development. What is more, part of their job is to taking care of proper functioning of website form programming point of view. For them it is important to know programming languages like HTML / CSS, C #, Ruby or PHP."
+        "result": "Front-end Developer",
+        "description": "Front-end Developer is a person responsible for the appearance and development of the user interface of the websites for many devices."
       }
     ]
   }

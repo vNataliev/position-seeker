@@ -17,7 +17,7 @@
     },
     {
         "name": "Cybersecurity",
-        "description": "People here protect company's assets from threats and unathorized acesses."
+        "description": "People here protect the company's assets from threats and unauthorized accesses."  
     },
     {
         "name": "Management",
@@ -25,6 +25,6 @@
     },
     {
         "name": "Testing",
-        "description": "In this group, with the help of techniques and hard skills, people ensure the highest quality of the product and protect it against bugs and incovinice that customers may experience."
+        "description": "In this group, with the help of techniques and hard skills, people ensure the highest quality of the product and protect it against bugs and inconvenience that customers may experience."
     }
 ]

@@ -8,7 +8,7 @@
                 "score_it_infra": 4,
                 "score_design": 0,
                 "score_data": 6,
-                "score_cybersecurity":4,
+                "score_cybersecurity": 4,
                 "score_management": 0,
                 "score_testing": 5
             },
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "question": "Do you like to designing or building a company's network and its system infrastructure?",
+        "question": "Do you like designing or building a company's network and its system infrastructure?",
         "answers": [
             {
                 "text": "Yes", 
